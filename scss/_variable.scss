@@ -1,0 +1,36 @@
+/* 1170, 12, 10 14 30px 40px #e8e8e8 #25292c #888888 #ca7379*/
+
+
+//변수만들기
+
+//   size
+$size-content:1170px;
+$size-basic:10px;
+
+//   font
+$font-small:12px;
+$font-large:14px;
+
+//   color
+$color-font:#888888;
+$color-darken:#25292c;
+$color-back:#e8e8e8;
+$color-red:#ca7379;
+
+
+$white:#fff;
+$full:100%;
+$width:200px;
+$bottom:50px;
+$height:36px;
+
+//단축형:꼭 해야 되는것은 아니다.
+$basic:$size-basic;
+$content:$size-content;
+$small:$font-small;
+$large:$font-large;
+
+$color:$color-font;
+$darken:$color-darken;
+$back:$color-back;
+$red:$color-red;

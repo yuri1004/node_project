@@ -1,0 +1,60 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+// footer
+#footer{
+    padding: $basic * 7 0 $basic *5;
+    background-color: $back;
+    > aside{
+        width: $content;
+        font-size: $small;
+        @include margin($bottom:$basic*6);
+        @include layout($wrap:wrap,$vertical:flex-start);
+        dl{
+            width:calc($full / 4);
+            dt{
+                margin-bottom: $basic *3;
+                font-size: $large;
+                font-weight: bold;
+                color: $darken;
+                span{
+                    font-weight: bold;
+                    padding-bottom: $basic;
+                    border-bottom: 1px solid $darken;
+                }
+            }
+            dd{
+                margin-bottom: $large;
+                a{
+                    color: $color;
+                }
+            }
+            &:nth-child(1){
+                address{
+                font-style: normal;
+                font-weight: bold;
+                line-height: 25px;
+                width: 247px;
+                font-size: $large;
+                color: $darken;
+                margin-bottom: $small * 4;
+            }
+            }
+        }
+    }
+    footer{
+        width: $content;
+        @include margin;
+        @include layout;
+        small{
+            font-size: $small;
+            color: $color;
+        }
+        ul{
+            display: flex;
+            li{
+                margin-left: $basic;
+            }
+        }
+    }
+}

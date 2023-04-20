@@ -1,0 +1,62 @@
+/* 1170, 12, 14 30px 40px #e8e8e8 #25292c #888888 #ca7379*/
+
+/* aside */
+#footer{
+    padding: 70px 0 50px;
+    background-color: #e8e8e8;
+}
+#footer>aside{
+    width: 1170px;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+#footer>aside>dl{
+    width: 25%;
+}
+#footer>aside>dl>dt{
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #25292c;
+}
+#footer>aside>dl>dt>span{
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #25292c;
+}
+#footer>aside>dl>dd{
+    margin-bottom: 15px;
+}
+#footer>aside>dl>dd>a{
+    color: #888888;
+}
+#footer>aside>dl:nth-child(1)>dd>address{
+    font-style: normal;
+    color: #25292c;
+    margin-bottom: 46px;
+    font-weight: bold;
+    width: 247px;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+/* footer */
+#footer>footer{
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#footer>footer>small{
+    font-size: 12px;
+    color: #888888;
+}
+#footer>footer>ul{
+    display: flex;
+}
+#footer>footer>ul>li{
+    margin-left: 10px;
+}
+#footer>footer>ul>li>a{}

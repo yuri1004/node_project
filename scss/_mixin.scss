@@ -1,0 +1,26 @@
+@use './variable' as *;
+@mixin layout($start:space-between, $vertical:center,$wrap:nowrap){
+    display: flex;
+    justify-content: $start;
+    align-items:$vertical;
+    flex-wrap:$wrap;
+    @content;
+}
+
+@mixin margin($bottom:0){
+    margin: 0 auto;
+    margin-bottom: $bottom;
+    @content;
+}
+@mixin center{
+    text-align: center;
+}
+@mixin position{
+    position: relative;
+}
+@mixin position1{
+    position: absolute;
+}
+@mixin border($border1:#e8e8e8){
+    border: 1px solid $border1;
+}

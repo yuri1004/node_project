@@ -1,0 +1,130 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+// article
+article{
+    > div{
+        width: $content;
+        @include margin;
+        padding: $basic * 9 0;
+        h3{
+            font-size: $small + 28;
+            color: $darken;
+            @include center;
+            @include margin($bottom:80px)
+        }
+    }
+}
+
+
+.btn{
+    margin-bottom: $basic + 3;
+    @include position;
+    @include layout;
+    > p.left{
+        font-size: $small;
+        color: $color;
+    }
+    > p.right{
+        width: $width;
+        @include border;
+        border-radius: 18px;
+        padding: $small 0;
+        @include layout($start:center);
+        font-size: $small;
+        box-sizing: border-box;
+        color: $color;
+        i{
+            padding-left: $basic;
+        }
+    }
+    ul{
+        display: none;
+        width: $width;
+        @include position1;
+        right: 0;top: 40px;
+        @include border($border1:#888);
+        border-bottom: none;
+        background-color: $white;
+        z-index: 100;
+        li{
+            @include border($border1:#888);
+            line-height: 25px;
+            @include center;
+            font-size: $small;
+            color: $color;
+        }
+    }
+}
+
+article .gallery{
+    width: $content;
+    @include margin;
+    @include layout($wrap:wrap);
+    figure{
+        width: $width + 70;
+        margin-bottom: $basic * 5;
+        @include position;
+        img{
+            margin-bottom: ($bottom / 2);
+        }
+        figcaption{
+            dl{
+                font-size: $large;
+                @include center;
+                dt{
+                    margin-bottom: $large;
+                    color: $darken;
+                    font-weight: bold;
+                }
+                dd{
+                    &:nth-child(2){
+                        margin-bottom: ($bottom / 2);
+                    > ins{
+                        color: $red;
+                        margin: 0 $basic; 
+                    }
+                    > del{
+                        color: $color;
+                        margin: 0 $basic; 
+                    }
+                    }
+                    &:nth-child(3){
+                        @include layout;
+                        button{
+                        @include layout($start:center);
+                        &:nth-child(1){
+                            width: $width - 70;
+                            height:$height;
+                            color: $darken;
+                            border-radius: 18px;
+                            @include border($border1:#888);
+                        }
+                        &:nth-child(2){
+                            width: $height;
+                            height: $height;
+                            border-radius: calc($full / 2);
+                            @include border($border1:#888);
+                        }
+                    }
+                    }
+                    &:last-child{
+                        @include position1;
+                        right: 0;bottom: 140px;
+                        b{
+                            display: block;  
+                            width: $bottom;
+                            height: $bottom;
+                            color: $white;
+                            background-color: $red;
+                            @include layout($start:center);
+                            border-radius: calc($full / 2);
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+}
